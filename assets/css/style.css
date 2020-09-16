@@ -2,6 +2,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background: url(../images/daybookpic.jpg);
+  background-size: 1500px;
 }
 
 textarea{
@@ -19,6 +21,33 @@ textarea{
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+}
+
+h1 {
+    -webkit-text-stroke: 1px white;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.time-box,
+.text-box,
+.save-box {
+  float: left;
+}
+
+.time-box {
+    width: 25%;
+}
+
+.text-box {
+    width: 65%;
+}
+
+.save-box {
+    width: 10%;
 }
 
 .description{
