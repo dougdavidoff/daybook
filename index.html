@@ -19,9 +19,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/style.css">
-
-
-
     <title>Daybook</title>
   </head>
 
@@ -31,28 +28,53 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
 
-    <section id="0900">
-          <div class="time-box">9:00am</div>
-          <textarea class="text-box"></textarea>
-          <div class="save-box">save</div>
-    </section>
-    <section id="1000">
-        <div class="time-box">10:00am</div>
-        <textarea class="text-box"></textarea>
-        <div class="save-box">save</div>
-    </section>
-      
-      
-      
-    
-    
-    
-    
-    
-    
+    <div class="container">
+        <section id="t0900">
+        <div class="time-block">9:00am</div>
+        <textarea class="text-block"></textarea>
+        <div class="save-block">save</div>
+      </section>
+      <section id="t1000">
+        <div class="time-block">10:00am</div>
+        <textarea class="text-block past" id="text1000"></textarea>
+        <div class="save-block">save</div>
+      </section>
+      <section id="t1100">
+        <div class="time-block">11:00am</div>
+        <textarea class="text-block"></textarea>
+        <div class="save-block">save</div>
+      </section>
+      <section id="t1200">
+        <div class="time-block">12:00pm</div>
+        <textarea class="text-block"></textarea>
+        <div class="save-block">save</div>
+      </section>
+      <section id="t1300">
+        <div class="time-block">1:00pm</div>
+        <textarea class="text-block future" id="text1300"></textarea>
+        <div class="save-block">save</div>
+      </section>
+      <section id="t1400">
+        <div class="time-block">2:00pm</div>
+        <textarea class="text-block"></textarea>
+        <div class="save-block">save</div>
+      </section>
+      <section id="t1500">
+        <div class="time-block">3:00pm</div>
+        <textarea class="text-block"></textarea>
+        <div class="save-block">save</div>
+      </section>
+      <section id="t1600">
+        <div class="time-block">4:00pm</div>
+        <textarea class="text-block"></textarea>
+        <div class="save-block">save</div>
+      </section>
+      <section id="t1700">
+        <div class="time-block">5:00pm</div>
+        <textarea class="text-block"></textarea>
+        <div class="save-block">save</div>
+      </section>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
