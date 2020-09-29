@@ -42,6 +42,8 @@ h1 {
 .time-block {
     width: 15%;
     border-top: 2px solid black;
+    text-align: center;
+    border-radius: 15px;
 }
 
 .text-block {
@@ -53,27 +55,6 @@ h1 {
     width: 10%;
     background: lightblue;
     height: 55px;
-}
-
-.description{
-  white-space: pre-wrap;
-}
-
-.time-block{
-  text-align: center;
-  border-radius: 15px;
-}
-
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;;
-}
-
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
 }
 
 .past {
@@ -91,19 +72,6 @@ h1 {
   color: white;
 }
 
-.saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06AED5;
-  color: white;
-}
-
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
-}
-
 section {
   overflow: auto;
 }
@@ -117,4 +85,33 @@ i {
 .lead {
   font-size: 22px;
   font-family: serif;
+}
+
+#container-parent {
+  position: relative;
+}
+
+#success-popup {
+  position: absolute;
+  height: 150px;
+  width: 500px;
+  background-color: royalblue;
+  color: white;
+  left: 25%;
+  top: 25%;  
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+#success-button {
+  color: rosybrown;
+  font-size: 18px;
+  margin-left: 100px;
+  margin-top: 45px;
 }

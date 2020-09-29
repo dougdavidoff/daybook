@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
+
+    <!-- Links to CDNs and APIs for Bootstrap, FontAwesome, Google, and our custom CSS stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/01639084ad.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Daybook</title>
   </head>
 
   <body>
+
+    <!-- Bootstrap Jumboton header -->
     <header class="jumbotron">
       <h1 class="display-3">Daybook</h1>
-      <p class="lead">A simple calendar app for scheduling the work day.</p>
+      <p class="lead">A simple app for scheduling the work day.</p>
+      <hr>
       <p id="currentDay" class="lead"></p>
+      <hr>
     </header>
 
-    <div id='container-parent' class="container"></div>
+    <!-- Container, but most elements created in JavaScript file -->
+    <div id='container-parent' class="container">
+      <div id='success-popup' class='hidden'>
+        <button id='success-button'><h2>Saved. Click to close.</h2></button>
+      </div>    
+    </div>
 
+    <!-- jQuery, Moment, and custom JavaScript file links  -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>
+
   </body>
 </html>

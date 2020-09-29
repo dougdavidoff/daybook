@@ -1,89 +1,71 @@
 $(document).ready;
 
+// Present time
 const now = moment();
-console.log(now.format());
-
 const thisDay = moment();
-console.log(
-"Today's date is: " + 
-thisDay.format('[Today is] dddd, MMMM Do YYYY?'));
 
-
+// Displaying date at top of Daybook planner
 var topToday = document.getElementById("currentDay");
 topToday.textContent = thisDay.format('[Today is] dddd, MMMM Do, YYYY.');
 
-// // Check browser support
-// if (typeof(Storage) !== "undefined") {
-//   // Store
-//   localStorage.setItem("lastname", "Smith");
-//   // Retrieve
-//   document.getElementById("result").innerHTML = localStorage.getItem("lastname");
-// } else {
-//   document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-// }
+// Keeping track of current hour for setting 'past', 'present', and 'future' to text blocks for each hour.
+var hourNow = moment().get("hour");
 
-
-  var hourNow = moment().get("hour");
-  console.log("The current hour is " + hourNow);
-
-  var container = $( "#container-parent" )
-    for(var i = 9; i < 18; i++) {
-      var calHour ='t' + i;
-      var calShowHour = i;
-      if (i < 12) {
-        calShowHour = i + ":00 am"
-      } else if (i === 12) {
-        calShowHour = "12:00 noon"
-      } else {
-        calShowHour = i - 12 + ":00 pm"
-      }
-      var sectionDiv = $(document.createElement('div')).addClass('time-block').text(calShowHour);
-      var textAreaEl = $(document.createElement('textarea')).addClass('text-block').attr('id', 'text' + i);
-
-      var icon = $(document.createElement('i')).addClass('fas fa-save');
-      var saveDiv = $(document.createElement('button')).addClass('save-block').addClass("save" + i).append(icon).attr("id", "button-" + i);
-      var newSection = document.createElement('section');
-      newSection.id = calHour;
-      container.append(newSection);
-      var fetchedSection = $('#' + calHour )
-      fetchedSection.append(sectionDiv)
-      fetchedSection.append(textAreaEl)
-      fetchedSection.append(saveDiv)
-      if (i > hourNow) {
-        $( "textarea" ).addClass("past")
-      } else if (i === hourNow) {
-        $( "textarea" ).addClass("present")
-      } else {
-        $( "textarea" ).addClass("future")
-      }
-
-      document.getElementById("text" + i).innerHTML = localStorage.getItem("text" + i);
-
-
-      // document.getElementById('text' + i).addEventListener("click", function() {
-      //   console.log("The 'text" + i +"' button was clicked.")
-      // });
-
-
+var container = $( "#container-parent" )
+  
+  // loop to set up body of planner inside Daybook
+  for(var i = 9; i < 18; i++) {
+    var calHour ='t' + i;
+    var calShowHour = i;
+    
+    // Clock aritmatic to show proper hours in planner
+    if (i < 12) {
+      calShowHour = i + ":00 am"
+    } else if (i === 12) {
+      calShowHour = "12:00 noon"
+    } else {
+      calShowHour = i - 12 + ":00 pm"
     }
 
+    // Populating elements of the Daybook planning grid
+    var sectionDiv = $(document.createElement('div')).addClass('time-block').text(calShowHour);
+    var textAreaEl = $(document.createElement('textarea')).addClass('text-block').attr('id', 'text' + i);
+    var icon = $(document.createElement('i')).addClass('fas fa-save');
+    var saveDiv = $(document.createElement('button')).addClass('save-block').addClass("save" + i).append(icon).attr("id", "button-" + i);
+    var newSection = document.createElement('section');
+    newSection.id = calHour;
+    container.append(newSection);
+    var fetchedSection = $('#' + calHour )
+    fetchedSection.append(sectionDiv)
+    fetchedSection.append(textAreaEl)
+    fetchedSection.append(saveDiv)
+    
+    // Adding 'past', 'present', and 'future' colors to grid text areas
+    if (i > hourNow) {
+      $( "textarea" ).addClass("past")
+    } else if (i === hourNow) {
+      $( "textarea" ).addClass("present")
+    } else {
+      $( "textarea" ).addClass("future")
+    }
 
+    // Populating grid events from Local Storage
+    document.getElementById("text" + i).innerHTML = localStorage.getItem("text" + i);
+  }
+
+// Saving new events in Local Storage, with popup confirm box
 $(".save-block").click(function(){
-  alert("A save icon was clicked.")
-  console.log("This.ID ", this.id);
   var id = this.id.split("-")[1];
   console.log("ID ", id);
   var key = "text" + id;
   console.log("key", key);
   var storeText = $('#' + key).val()
   localStorage.setItem(key, storeText)
+  var popup = $("#success-popup");
+  popup.removeClass('hidden').addClass('visible');
 });
-  // for(i = 9; i <18; i++) {
-  //   var textAreaName = 
-  //   localStorage.setItem("save" + i)
-  // }
 
-    
-
-
-
+// Making popup confirm box disappear on click of button
+$('#success-popup').click(function() {
+  $('#success-popup').removeClass('visible').addClass('hidden');
+})
