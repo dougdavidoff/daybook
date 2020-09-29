@@ -18,64 +18,19 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/01639084ad.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Daybook</title>
   </head>
 
   <body>
     <header class="jumbotron">
-      <h1 class="display-3">My Daybook</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <h1 class="display-3">Daybook</h1>
+      <p class="lead">A simple calendar app for scheduling the work day.</p>
       <p id="currentDay" class="lead"></p>
     </header>
 
-    <div class="container">
-        <section id="t0900">
-        <div class="time-block">9:00am</div>
-        <textarea class="text-block"></textarea>
-        <div class="save-block">save</div>
-      </section>
-      <section id="t1000">
-        <div class="time-block">10:00am</div>
-        <textarea class="text-block past" id="text1000"></textarea>
-        <div class="save-block">save</div>
-      </section>
-      <section id="t1100">
-        <div class="time-block">11:00am</div>
-        <textarea class="text-block"></textarea>
-        <div class="save-block">save</div>
-      </section>
-      <section id="t1200">
-        <div class="time-block">12:00pm</div>
-        <textarea class="text-block"></textarea>
-        <div class="save-block">save</div>
-      </section>
-      <section id="t1300">
-        <div class="time-block">1:00pm</div>
-        <textarea class="text-block future" id="text1300"></textarea>
-        <div class="save-block">save</div>
-      </section>
-      <section id="t1400">
-        <div class="time-block">2:00pm</div>
-        <textarea class="text-block"></textarea>
-        <div class="save-block">save</div>
-      </section>
-      <section id="t1500">
-        <div class="time-block">3:00pm</div>
-        <textarea class="text-block"></textarea>
-        <div class="save-block">save</div>
-      </section>
-      <section id="t1600">
-        <div class="time-block">4:00pm</div>
-        <textarea class="text-block"></textarea>
-        <div class="save-block">save</div>
-      </section>
-      <section id="t1700">
-        <div class="time-block">5:00pm</div>
-        <textarea class="text-block"></textarea>
-        <div class="save-block">save</div>
-      </section>
-    </div>
+    <div id='container-parent' class="container"></div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
