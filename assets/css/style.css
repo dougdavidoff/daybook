@@ -93,8 +93,8 @@ i {
 
 #success-popup {
   position: absolute;
-  height: 150px;
-  width: 500px;
+  height: 115px;
+  width: 400px;
   background-color: royalblue;
   color: white;
   left: 25%;
