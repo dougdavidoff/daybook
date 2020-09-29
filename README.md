@@ -8,7 +8,7 @@ The website requires no installation steps from the user. The website makes use 
 
 The image below shows the standard view of the Daybook with several events entered.
 
-![Daybook image](/assets/images/200929 Daybook App Image.png)
+![Daybook image](./assets/images/200929 Daybook App Image.png)
 
 ### Purpose of the Project
 This app demonstrates several technologies used to create event planning apps. The app presumes to be used by a person conducting activities, appointments, and events during normal business hours.
@@ -18,7 +18,7 @@ I received help on this project chiefly from two people:
 1. My tutor, Frank Craven, was extremely helpful. He helped me learn new technologies and, in some cases, master them. Frank suggested the idea of the popup window upon saving events, as shown below.
 1. My instructional assistant, Matt Torcelinni, was a steady advisor and helped me overcome coding challenges.
 
-![Daybook image](/assets/images/200929 Daybook App Image Showing Save Button.png)
+![Daybook image](./assets/images/200929 Daybook App Image Showing Save Button.png)
 
 
 
